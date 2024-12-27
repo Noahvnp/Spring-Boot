@@ -14,6 +14,7 @@ public enum ErrorCode {
     INVALID_PASSWORD(1004, "Password must be at least 4 characters."),
     EMPTY_FIRSTNAME(1005, "Firstname must be not empty."),
     EMPTY_LASTNAME(1006, "Lastname must be not empty."),
+    USER_NOT_EXISTED(1007, "User not existed."),
     ;
 
     int code;
