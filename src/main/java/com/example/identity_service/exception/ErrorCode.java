@@ -15,6 +15,7 @@ public enum ErrorCode {
     EMPTY_FIRSTNAME(1005, "Firstname must be not empty."),
     EMPTY_LASTNAME(1006, "Lastname must be not empty."),
     USER_NOT_EXISTED(1007, "User not existed."),
+    UNAUTHENTICATED(1008, "Unauthenticated."),
     ;
 
     int code;
