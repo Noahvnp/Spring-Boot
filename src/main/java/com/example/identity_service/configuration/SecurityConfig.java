@@ -37,8 +37,6 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(@NotNull HttpSecurity httpSecurity) throws Exception {
         httpSecurity.authorizeHttpRequests(request ->
                 request.requestMatchers(HttpMethod.POST, PUBLIC_ENDPOINTS).permitAll()
-                        .requestMatchers(HttpMethod.GET, "/users")
-                        .hasRole(Role.ADMIN.name())
                 .anyRequest().authenticated()
         );
 
