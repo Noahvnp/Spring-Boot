@@ -19,6 +19,7 @@ public class GlobalExceptionHandler {
                 ApiResponse.builder()
                         .code(ErrorCode.UNCATEGORIZED_EXCEPTION.getCode())
                         .message(ErrorCode.UNCATEGORIZED_EXCEPTION.getMessage())
+                        .result("Uncategorized exception: " + exception)
                         .build()
         );
     }
