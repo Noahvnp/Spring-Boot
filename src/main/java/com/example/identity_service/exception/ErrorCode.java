@@ -21,6 +21,7 @@ public enum ErrorCode {
     USER_NOT_EXISTED(1007, "User not existed.", HttpStatus.NOT_FOUND),
     UNAUTHENTICATED(1008, "Unauthenticated.", HttpStatus.UNAUTHORIZED),
     UNAUTHORIZED(1009, "You do not have permission.", HttpStatus.FORBIDDEN),
+    INVALID_DOB(1010, "Invalid date of birth.", HttpStatus.BAD_REQUEST),
     ;
 
     int code;
