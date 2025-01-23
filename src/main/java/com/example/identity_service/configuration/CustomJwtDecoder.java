@@ -1,6 +1,8 @@
 package com.example.identity_service.configuration;
 
 import com.example.identity_service.dto.request.IntrospectRequest;
+import com.example.identity_service.exception.AppException;
+import com.example.identity_service.exception.ErrorCode;
 import com.example.identity_service.service.AuthenticationService;
 import com.nimbusds.jose.JOSEException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +39,6 @@ public class CustomJwtDecoder implements JwtDecoder {
 
             if (!response.isValid())
                 throw new JwtException("Token invalid.");
-
         } catch  (ParseException | JOSEException e) {
             throw new JwtException(e.getMessage());
         }
